@@ -10,10 +10,29 @@
                         <div class="oe_read_only" style="font-size:25px">Nhân viên</div>
                         <group col="4" string="Thông tin chung">
                             <field name="ma_dinh_danh"/>
+                            <field name="ho_va_ten"/>
+                            <field name="hinh_anh" widget="image" class="oe_avatar"/>
                             <field name="ngay_sinh"/>
+                            <field name="gioi_tinh"/>
+                            <field name="can_cuoc_cong_dan"/>
+                            <field name="tuoi"/>
                             <field name="que_quan"/>
                             <field name="email"/>
+                            <field name="dc_tam_tru"/>
+                            <field name="dc_thuong_tru"/>
+                            <field name="so_dien_thoai"/>
+                            <field name="don_vi"/>
+                            <field name="chuc_vu"/>
                         </group>
+                        <notebook>
+                            <page string="Danh sách lịch sử công tác">
+                                <field name = "lich_su_cong_tac_ids"/>
+                            </page>
+                            <page string="Danh mục chứng chỉ bằng cấp">
+                                <field name = "danh_muc_chung_chi_bang_cap_ids"/>
+                            </page>
+                             
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -25,9 +44,19 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_dinh_danh"/>
+                    <field name="ho_va_ten"/>
+                    <field name="hinh_anh" widget="image" class="oe_avatar"/>
                     <field name="ngay_sinh"/>
+                    <field name="gioi_tinh"/>
+                    <field name="can_cuoc_cong_dan"/>
+                    <field name="tuoi"/>
                     <field name="que_quan"/>
                     <field name="email"/>
+                    <field name="dc_tam_tru"/>
+                    <field name="dc_thuong_tru"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="don_vi"/>
+                    <field name="chuc_vu"/>
                 </tree>
             </field>
         </record>
@@ -37,9 +66,19 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="ma_dinh_danh"/>
+                    <field name="ho_va_ten"/>
+                    <field name="hinh_anh" widget="image" class="oe_avatar"/>
                     <field name="ngay_sinh"/>
+                    <field name="gioi_tinh"/>
+                    <field name="can_cuoc_cong_dan"/>
+                    <field name="tuoi"/>
                     <field name="que_quan"/>
                     <field name="email"/>
+                    <field name="dc_tam_tru"/>
+                    <field name="dc_thuong_tru"/>
+                    <field name="so_dien_thoai"/>
+                    <field name="don_vi"/>
+                    <field name="chuc_vu"/>
                 </search>
             </field>
         </record>
@@ -52,5 +91,3 @@
         </record>
     </data>
 </odoo>
-        
-    

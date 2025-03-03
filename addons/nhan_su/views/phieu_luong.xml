@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- View Form -->
+        <record id="view_phieu_luong_form" model="ir.ui.view">
+            <field name="name">phieu_luong</field>
+            <field name="model">phieu_luong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Quản lý lương</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="nhan_vien_id"/>
+                            <field name="ngay"/>
+                            <field name="luong_co_ban"/>
+                            <field name="thuong"/>
+                            <field name="phu_cap_xang_xe"/>
+                            <field name="phu_cap_an_trua"/>
+                            <field name="phu_cap_dien_thoai"/>
+                            <field name="phat"/>
+                            <field name="bhxh"/>
+                            <field name="bhyt"/>
+                            <field name="bhtn"/>
+                            <field name="thue_tncn"/>
+                            <field name="tong_luong"/>
+                            <field name="trang_thai" widget="statusbar"/>
+                        </group>
+                    <!-- Footer in form view -->
+                        <footer>
+                            <button name="action_xac_nhan" 
+                                    type="object" 
+                                    string="Xác nhận" 
+                                    class="btn-primary" 
+                                    attrs="{'invisible': [('trang_thai', '!=', 'cho_duyet')]}"/>
+                        </footer>
+                   </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- View Tree -->
+        <record id="view_phieu_luong_tree" model="ir.ui.view">
+            <field name="name">phieu_luong</field>
+            <field name="model">phieu_luong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay"/>
+                    <field name="luong_co_ban"/>
+                    <field name="thuong"/>
+                    <field name="phu_cap_xang_xe"/>
+                    <field name="phu_cap_an_trua"/>
+                    <field name="phu_cap_dien_thoai"/>
+                    <field name="phat"/>
+                    <field name="bhxh"/>
+                    <field name="bhyt"/>
+                    <field name="bhtn"/>
+                    <field name="thue_tncn"/>
+                    <field name="tong_luong"/>
+                    <field name="trang_thai" widget="statusbar"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="phieu_luong_search">
+            <field name="model">phieu_luong</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay"/>
+                    <field name="luong_co_ban"/>
+                    <field name="thuong"/>
+                    <field name="phu_cap_xang_xe"/>
+                    <field name="phu_cap_an_trua"/>
+                    <field name="phu_cap_dien_thoai"/>
+                    <field name="phat"/>
+                    <field name="bhxh"/>
+                    <field name="bhyt"/>
+                    <field name="bhtn"/>
+                    <field name="thue_tncn"/>
+                    <field name="tong_luong"/>
+                    <field name="trang_thai" widget="statusbar"/>
+
+
+                    <!-- Thêm Search Panel -->
+                    <searchpanel>
+                        <field name="trang_thai" select="multi"/>
+                    </searchpanel>
+                    <!-- Thêm bộ lọc tìm kiếm -->
+
+                    <filter name="cho_duyet" string="Chờ duyệt" domain="[('trang_thai', '=', 'cho_duyet')]"/>
+                    <filter name="da_duyet" string="Đã duyệt" domain="[('trang_thai', '=', 'da_duyet')]"/>
+                </search>
+            </field>
+        </record>
+        
+        <!-- Action -->
+        <record id="action_phieu_luong" model="ir.actions.act_window">
+            <field name="name">Lương</field>
+            <field name="res_model">phieu_luong</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="phieu_luong_search"/>
+        </record>
+    </data>
+</odoo>

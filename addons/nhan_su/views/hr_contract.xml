@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_contract_form" model="ir.ui.view">
+        <field name="name">hr_contract.form</field>
+        <field name="model">hr_contract</field>
+        <field name="arch" type="xml">
+            <form string="Hợp đồng nhân viên">
+                <sheet>
+                    <div class="oe_read_only" style="font-size:25px">Quản lý hợp đồng</div>
+                    <group col="2" string="Thông tin chung">
+                        <field name="nhan_vien_id"/>
+                        <field name="loai_hop_dong"/>
+                        <field name="ngay_bat_dau"/>
+                        <field name="ngay_ket_thuc"/>
+                        <field name="luong_hop_dong"/>
+                        <field name="status"/>
+                        <!-- <field name="salary_ids"/> -->
+                        <field name="note" widget="text"/>
+                    </group>
+                    <footer>
+                        <button name="action_terminate" type="object" string="Chấm dứt hợp đồng" class="oe_highlight" attrs="{'invisible': [('status', '=', 'terminated')]}"/>
+                        <button string="Đóng" class="oe_link" special="cancel"/>
+                        <button name="action_renew"
+                                type="object"
+                                string="Gia hạn hợp đồng"
+                                class="btn-primary"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_contract_tree" model="ir.ui.view">
+        <field name="name">hr_contract.tree</field>
+        <field name="model">hr_contract</field>
+        <field name="arch" type="xml">
+            <tree string="Danh sách hợp đồng">
+                <field name="nhan_vien_id"/>
+                <field name="loai_hop_dong"/>
+                <field name="ngay_bat_dau"/>
+                <field name="ngay_ket_thuc"/>
+                <field name="luong_hop_dong"/>
+                <field name="status"/>
+                <!-- <field name="salary_ids"/> -->
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_contract" model="ir.actions.act_window">
+        <field name="name">Hợp đồng nhân viên</field>
+        <field name="res_model">hr_contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,16 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem
-            id="menu_root"
-            name="QLNS"
-            sequence="0"/>
-          
-        <menuitem name="Quản lý nhân viên" 
-            id="menu_nhan_vien" 
+        <!-- Menu gốc -->
+        <menuitem id="menu_root"
+                  name="QLNS"
+                  sequence="0"/>
+        
+        <!-- Menu cha: Quản lý nhân viên -->
+        <menuitem id="menu_quan_ly_ho_so"
+                  name="Quản lý hồ sơ nhân viên"
+                  parent="menu_root"
+                  sequence="1"/>
+
+        <!-- Các menu con của "Quản lý hồ sơ nhân viên" -->
+        <menuitem id="menu_danh_sach_nhan_vien"
+                  name="Danh sách nhân viên"
+                  parent="menu_quan_ly_ho_so"
+                  action="action_nhan_vien"
+                  sequence="1"/>
+
+        <menuitem id="menu_chuc_vu"
+                  name="Quản lý chức vụ"
+                  parent="menu_quan_ly_ho_so"
+                  action="action_chuc_vu"
+                  sequence="2"/>
+
+        <menuitem id="menu_don_vi"
+                  name="Quản lý đơn vị"
+                  parent="menu_quan_ly_ho_so"
+                  action="action_don_vi"
+                  sequence="3"/>
+
+        <menuitem id="menu_lich_su_cong_tac"
+                  name="Quản lý lịch sử công tác"
+                  parent="menu_quan_ly_ho_so"
+                  action="action_lich_su_cong_tac"
+                  sequence="4"/>
+
+        <menuitem id="menu_danh_muc_chung_chi_bang_cap"
+                  name="Danh mục chứng chỉ bằng cấp"
+                  parent="menu_quan_ly_ho_so"
+                  action="action_danh_muc_chung_chi_bang_cap"
+                  sequence="5"/>
+
+        <!-- Menu cha: Quản lý lương (Bị thiếu) -->
+        <menuitem id="menu_quan_ly_luong"
+                  name="Quản lý lương"
+                  parent="menu_root"
+                  sequence="2"/>
+
+       <!-- Menu Hợp đồng lao động -->
+        <menuitem id="menu_hop_dong"
+                  name="Hợp đồng"
+                  parent="menu_quan_ly_luong"
+                  action="action_hr_contract"
+                  sequence="1"/>
+        
+        <menuitem id="menu_phieu_luong"
+                  name="Phiếu lương"
+                  parent="menu_quan_ly_luong"
+                  action="action_phieu_luong"
+                  sequence="2"/>
+<!-- Menu: Phòng ban -->
+        <menuitem name="Phòng ban" 
+            id="menu_phong_ban" 
             parent="menu_root" 
-            sequence="1"
-            action="action_nhan_vien"
+            sequence="2" 
+            action="action_phong_ban"
         />
+        
+        <menuitem name="Quản lý khóa học" 
+            id="menu_khoa_hoc" 
+            parent="menu_root" 
+            sequence="4" 
+            action="action_khoa_hoc" /> <!-- Thứ tự 4 -->
+
+        <menuitem name="Tham gia khóa đào tạo" 
+            id="menu_tham_gia_khoa_hoc" 
+            parent="menu_root" 
+            sequence="4" 
+            action="action_tham_gia_khoa_dao_tao" /> <!-- Thứ tự 4 -->
+        
+       
     </data>
 </odoo>
