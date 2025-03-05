@@ -43,13 +43,13 @@
                   action="action_danh_muc_chung_chi_bang_cap"
                   sequence="5"/>
 
-        <!-- Menu cha: Quản lý lương (Bị thiếu) -->
+        <!-- Menu cha: Quản lý lương -->
         <menuitem id="menu_quan_ly_luong"
                   name="Quản lý lương"
                   parent="menu_root"
                   sequence="2"/>
 
-       <!-- Menu Hợp đồng lao động -->
+        <!-- Menu Hợp đồng lao động -->
         <menuitem id="menu_hop_dong"
                   name="Hợp đồng"
                   parent="menu_quan_ly_luong"
@@ -61,26 +61,54 @@
                   parent="menu_quan_ly_luong"
                   action="action_phieu_luong"
                   sequence="2"/>
-<!-- Menu: Phòng ban -->
+        <menuitem id="menu_ngay_nghi"
+                  name="Ngày nghỉ"
+                  parent="menu_quan_ly_luong"
+                  action="action_ngay_nghi"
+                  sequence="3"/>
+
+        <!-- Menu: Phòng ban -->
         <menuitem name="Phòng ban" 
-            id="menu_phong_ban" 
-            parent="menu_root" 
-            sequence="2" 
-            action="action_phong_ban"
-        />
-        
-        <menuitem name="Quản lý khóa học" 
-            id="menu_khoa_hoc" 
-            parent="menu_root" 
-            sequence="4" 
-            action="action_khoa_hoc" /> <!-- Thứ tự 4 -->
+                  id="menu_phong_ban" 
+                  parent="menu_root" 
+                  sequence="3" 
+                  action="action_phong_ban"/>
+
+        <!-- Menu cha: Quản lý khóa học -->
+        <menuitem name="Quản lý đào tạo" 
+                  id="menu_quan_ly_dao_tao" 
+                  parent="menu_root" 
+                  sequence="4"/>
+
+        <!-- Các menu con của "Quản lý khóa học" -->
+        <menuitem name="Chương trình đào tạo" 
+                  id="menu_khoa_hoc" 
+                  parent="menu_quan_ly_dao_tao" 
+                  sequence="1" 
+                  action="action_khoa_hoc"/>
 
         <menuitem name="Tham gia khóa đào tạo" 
-            id="menu_tham_gia_khoa_hoc" 
-            parent="menu_root" 
-            sequence="4" 
-            action="action_tham_gia_khoa_dao_tao" /> <!-- Thứ tự 4 -->
-        
-       
+                  id="menu_tham_gia_khoa_hoc" 
+                  parent="menu_quan_ly_dao_tao" 
+                  sequence="2" 
+                  action="action_tham_gia_khoa_dao_tao"/>
+        <!-- Menu cha: Quản lý khen thương và kỷ luật -->
+        <menuitem name="Quản lý khen thưởng và kỉ luật" 
+                  id="menu_quan_ly_khen_ki" 
+                  parent="menu_root" 
+                  sequence="5"/>
+
+        <!-- Các menu con của "Quản lý khóa học" -->
+        <menuitem name="Khen thưởng" 
+                  id="menu_khen_thuong" 
+                  parent="menu_quan_ly_khen_ki" 
+                  sequence="1" 
+                  action="action_khen_thuong"/>
+
+        <menuitem name="Kỷ luật" 
+                  id="menu_ky_luat" 
+                  parent="menu_quan_ly_khen_ki" 
+                  sequence="2" 
+                  action="action_ky_luat"/>
     </data>
 </odoo>

@@ -14,7 +14,19 @@
                             <field name="mo_ta_khoa_hoc"/>
                             <field name="ke_hoach_giang_day"/>
                             <field name="loai_khoa_hoc"/>
+                            <field name="nguoi_dao_tao"/>
                         </group>
+                        <notebook>
+                        <page string="Nhân viên tham gia">
+                                <group col="2">
+                                    <field name="tham_gia_ids" widget="One2many_tags"/>
+                                    <field name="so_luong_nhan_vien" readonly="1"/>
+                                </group>
+                                 <!-- <group col="2"> -->
+                                    <!-- <field name="nhan_vien_ids" widget="One2many_tags"/> -->
+                                <!-- </group> -->
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -30,6 +42,9 @@
                     <field name="mo_ta_khoa_hoc"/>
                     <field name="ke_hoach_giang_day"/>
                     <field name="loai_khoa_hoc"/>
+                    <field name="nguoi_dao_tao"/>
+                    <field name="tham_gia_ids"/>
+                    <field name="so_luong_nhan_vien"/>
                 </tree>
             </field>
         </record>
@@ -43,6 +58,9 @@
                     <field name="mo_ta_khoa_hoc"/>
                     <field name="ke_hoach_giang_day"/>
                     <field name="loai_khoa_hoc"/>
+                    <field name="nguoi_dao_tao"/>
+                    <field name="tham_gia_ids"/>
+                    <field name="so_luong_nhan_vien"/>
                 </search>
             </field>
         </record>

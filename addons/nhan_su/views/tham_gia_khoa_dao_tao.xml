@@ -9,9 +9,11 @@
                     <sheet>
                         <div class="oe_read_only" style="font-size:25px">Tham gia khóa đào tạo</div>
                         <group col="4" string="Thông tin chung" >
-                            <field name="ma_khoa_hoc"/>
-                            <field name="employee_id"/>
-                            <field name="role"/>
+                             <field name="ma_khoa_hoc"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="vai_tro"/>
+                            <field name="ngay_tham_gia"/>
+                            <field name="trang_thai"/>
                         </group>
                     </sheet>
                 </form>
@@ -24,8 +26,11 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_khoa_hoc"/>
-                    <field name="employee_id"/>
-                    <field name="role"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="vai_tro"/>
+                    <field name="ngay_tham_gia"/>
+                    <field name="trang_thai"/>
+
                 </tree>
             </field>
         </record>
@@ -35,14 +40,16 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="ma_khoa_hoc"/>
-                    <field name="employee_id"/>
-                    <field name="role"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="vai_tro"/>
+                    <field name="ngay_tham_gia"/>
+                    <field name="trang_thai"/>
                 </search>
             </field>
         </record>
 
         <record id="action_tham_gia_khoa_dao_tao" model="ir.actions.act_window">
-            <field name="name">Danh sách phòng ban</field>
+            <field name="name">Danh sách tham gia khóa đào tạo</field>
             <field name="res_model">tham_gia_khoa_dao_tao</field>
             <field name="view_mode">tree,form</field>
             <field name="search_view_id" ref = "tham_gia_khoa_dao_tao_search"/>

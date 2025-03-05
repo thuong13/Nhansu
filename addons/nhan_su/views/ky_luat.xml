@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ky_luat_tree" model="ir.ui.view">
+            <field name="name">ky_luat.tree</field>
+            <field name="model">ky_luat</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten_vi_pham"/>
+                    <field name="loai_vi_pham"/>
+                    <field name="phat_tien"/>
+                    <field name="ngay_vi_pham"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ky_luat_form" model="ir.ui.view">
+            <field name="name">ky_luat.form</field>
+            <field name="model">ky_luat</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="ten_vi_pham"/>
+                            <field name="loai_vi_pham"/>
+                            <field name="phat_tien"/>
+                            <field name="ngay_vi_pham"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="note"/>
+                            <field name="trang_thai"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_ky_luat" model="ir.actions.act_window">
+            <field name="name">Kỷ luật</field>
+            <field name="res_model">ky_luat</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>
+        
+    

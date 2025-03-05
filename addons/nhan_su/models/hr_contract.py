@@ -5,6 +5,7 @@ class HrContract(models.Model):
     _name = "hr_contract"
     _description = "Hợp đồng nhân viên"
     _order = "ngay_bat_dau desc"
+    _rec_name = 'nhan_vien_id'
 
     nhan_vien_id = fields.Many2one('nhan_vien', string="Nhân viên", required=True, ondelete="cascade")
     loai_hop_dong = fields.Selection([

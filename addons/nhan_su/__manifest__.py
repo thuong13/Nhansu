@@ -35,6 +35,9 @@
         'views/phong_ban.xml',
         'views/khoa_hoc.xml',
         'views/tham_gia_khoa_dao_tao.xml',
+        'views/khen_thuong.xml',
+        'views/ky_luat.xml',
+        'views/ngay_nghi.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

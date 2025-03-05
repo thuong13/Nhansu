@@ -16,7 +16,6 @@
                             <field name="gioi_tinh"/>
                             <field name="can_cuoc_cong_dan"/>
                             <field name="tuoi"/>
-                            <field name="que_quan"/>
                             <field name="email"/>
                             <field name="dc_tam_tru"/>
                             <field name="dc_thuong_tru"/>
@@ -31,7 +30,24 @@
                             <page string="Danh mục chứng chỉ bằng cấp">
                                 <field name = "danh_muc_chung_chi_bang_cap_ids"/>
                             </page>
-                             
+                             <page string="Phòng ban">
+                                <field name = "phong_ban_id"/>
+                            </page>
+                            <page string="Hợp đồng">
+                                <field name = "hop_dong_ids"/>
+                            </page>
+                            <page string="Khóa đào tạo">
+                                <field name = "khoa_hoc_tham_gia_ids"/>
+                            </page>
+                            <page string="Bảng lương">
+                                <field name = "phieu_luong_ids"/>
+                            </page>
+                             <page string="Kỷ luật">
+                                <field name = "ky_luat_ids"/>
+                            </page>
+                            <page string="Khen thưởng">
+                                <field name = "khen_thuong_ids"/>
+                            </page>
                         </notebook>
                     </sheet>
                 </form>
@@ -50,7 +66,6 @@
                     <field name="gioi_tinh"/>
                     <field name="can_cuoc_cong_dan"/>
                     <field name="tuoi"/>
-                    <field name="que_quan"/>
                     <field name="email"/>
                     <field name="dc_tam_tru"/>
                     <field name="dc_thuong_tru"/>
@@ -72,7 +87,6 @@
                     <field name="gioi_tinh"/>
                     <field name="can_cuoc_cong_dan"/>
                     <field name="tuoi"/>
-                    <field name="que_quan"/>
                     <field name="email"/>
                     <field name="dc_tam_tru"/>
                     <field name="dc_thuong_tru"/>

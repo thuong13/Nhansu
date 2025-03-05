@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_khen_thuong_tree" model="ir.ui.view">
+            <field name="name">khen_thuong.tree</field>
+            <field name="model">khen_thuong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten_khen_thuong"/>
+                    <field name="loai_khen"/>
+                    <field name="so_tien"/>
+                    <field name="ngay"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+    <record id="view_khen_thuong_form" model="ir.ui.view">
+        <field name="name">khen_thuong.form</field>
+        <field name="model">khen_thuong</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="ten_khen_thuong"/>
+                        <field name="loai_khen"/>
+                        <field name="so_tien"/>
+                        <field name="ngay"/>
+                        <field name="nhan_vien_id"/>
+                        <field name="mo_ta"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_khen_thuong" model="ir.actions.act_window">
+        <field name="name">Khen thưởng</field>
+        <field name="res_model">khen_thuong</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    </data>
+</odoo>
+        
+    

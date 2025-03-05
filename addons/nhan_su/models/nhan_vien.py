@@ -19,7 +19,6 @@ class NhanVien(models.Model):
         string="Giới tính",default='chon gioi tinh',
         required=True
     )
-    que_quan = fields.Char("Quê quán", required=True)
     email = fields.Char("Email", required=True)
     dc_tam_tru = fields.Char("Địa chỉ tạm trú", required=True)
     dc_thuong_tru = fields.Char("Địa chỉ thường trú", required=True)
@@ -38,9 +37,9 @@ class NhanVien(models.Model):
         string="Danh mục chứng chỉ bằng cấp"
     )
  # Liên kết phòng ban
-    phong_ban_id = fields.Many2one(
+    phong_ban_id = fields.One2many(
         'phong_ban', 
-        inverse_name = "nhan_vien_id", 
+        "nhan_vien_id", 
         string="Phòng ban") 
    
     # Liên kết với khóa học
@@ -51,9 +50,31 @@ class NhanVien(models.Model):
 
 
     # Khóa học tham gia
-    khoa_hoc_tham_gia_ids = fields.One2many("tham_gia_khoa_dao_tao", "employee_id", string="Khóa học tham gia")
+    khoa_hoc_tham_gia_ids = fields.One2many("tham_gia_khoa_dao_tao", "nhan_vien_id", string="Khóa học tham gia")
+    
+    phieu_luong_ids = fields.One2many(
+        'phieu_luong', 
+        'nhan_vien_id',  
+        string="Bảng lương"
+    )
 
+    hop_dong_ids = fields.One2many(
+        'hr_contract', 
+        'nhan_vien_id',  
+        string="Bảng lương"
+    )
 
+    ky_luat_ids = fields.One2many(
+        'ky_luat',  # Model name
+        'nhan_vien_id',  # Inverse field in the 'ky_luat' model
+        string="Kỷ luật"
+    )
+
+    khen_thuong_ids = fields.One2many(
+        'khen_thuong',  
+        'nhan_vien_id', 
+        string="Khen thưởng"
+    )
 
     tuoi = fields.Integer("Tuổi", compute="_compute_tinh_tuoi", store=True)
 

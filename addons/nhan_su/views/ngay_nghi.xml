@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_ngay_nghi_form" model="ir.ui.view">
+            <field name="name">ngay_nghi</field>
+            <field name="model">ngay_nghi</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_read_only" style="font-size:25px">Ngày nghỉ</div>
+                        <group col="4" string="Thông tin chung">
+                            <field name="ten"/>
+                            <field name="nhan_vien_id"/>
+                            <field name="ngay_bat_dau"/>
+                            <field name="ngay_ket_thuc"/>
+                            <field name="loai_nghi"/>
+                            <field name="trang_thai"/>
+                            <field name="so_ngay"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ngay_nghi_tree" model="ir.ui.view">
+            <field name="name">ngay_nghi</field>
+            <field name="model">ngay_nghi</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ten"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay_bat_dau"/>
+                    <field name="ngay_ket_thuc"/>
+                    <field name="loai_nghi"/>
+                    <field name="trang_thai"/>
+                    <field name="so_ngay"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ngay_nghi_search">
+            <field name="model">ngay_nghi</field>
+            <field name="arch" type="xml">
+                <search>
+                     <field name="ten"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay_bat_dau"/>
+                    <field name="ngay_ket_thuc"/>
+                    <field name="loai_nghi"/>
+                    <field name="trang_thai"/>
+                    <field name="so_ngay"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_ngay_nghi" model="ir.actions.act_window">
+            <field name="name">Ngày nghỉ</field>
+            <field name="res_model">ngay_nghi</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref = "ngay_nghi_search"/>
+        </record>
+    </data>
+</odoo>
+        
+    

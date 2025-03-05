@@ -9,3 +9,7 @@ access_phieu_luong,phieu_luong.phieu_luong,model_phieu_luong,base.group_user,1,1
 access_phong_ban,phong_ban.phong_ban,model_phong_ban,base.group_user,1,1,1,1
 access_khoa_hoc,khoa_hoc.khoa_hoc,model_khoa_hoc,base.group_user,1,1,1,1
 access_tham_gia_khoa_dao_tao,tham_gia_khoa_dao_tao.tham_gia_khoa_dao_tao,model_tham_gia_khoa_dao_tao,base.group_user,1,1,1,1
+access_khen_thuong,khen_thuong.khen_thuong,model_khen_thuong,base.group_user,1,1,1,1
+access_ky_luat,ky_luat.ky_luat,model_ky_luat,base.group_user,1,1,1,1
+access_ngay_nghi,ngay_nghi.ngay_nghi,model_ngay_nghi,base.group_user,1,1,1,1
+
